@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Custom scrollbar hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hero slideshow animation */
+@keyframes slideshow {
+  0%,
+  30% {
+    transform: translateX(0);
+  }
+  33%,
+  63% {
+    transform: translateX(-33.333%);
+  }
+  66%,
+  96% {
+    transform: translateX(-66.666%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.hero-slide-track {
+  animation: slideshow 12s infinite;
+}
