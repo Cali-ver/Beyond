@@ -1,73 +1,96 @@
-const updates = [
-  { date: '22 Jan 2026', uni: 'Sage University', title: 'BA BSc Part II Re-Exam' },
-  { date: '21 Jan 2026', uni: 'Parul University', title: 'BBA 6th Semester Schedule' },
-  { date: '20 Jan 2026', uni: 'RGPV', title: 'Admission 2026-27' },
-  { date: '20 Jan 2026', uni: 'LNCT University', title: 'PGDM Admission 2026-27' },
-  { date: '22 Jan 2026', uni: 'Barkatullah University', title: 'UG Philosophy Exam Date Change' },
-  { date: '22 Jan 2026', uni: 'Sage University', title: 'BA BSc Part II Re-Exam' },
-  { date: '21 Jan 2026', uni: 'Parul University', title: 'BBA 6th Semester Schedule' },
-  { date: '20 Jan 2026', uni: 'RGPV', title: 'Admission 2026-27' },
-]
-
-const leftBtns = [
-  { label: 'APPLY NOW', cls: 'bg-red-600' },
-  { label: 'MERIT LIST', cls: 'bg-green-600' },
-  { label: 'ADMISSION INFO', cls: 'bg-blue-600' },
-  { label: 'ADMISSION INFO', cls: 'bg-blue-600' },
-  { label: 'NEWS', cls: 'bg-yellow-400 text-black' },
-  { label: 'NEWS', cls: 'bg-yellow-400 text-black' },
-  { label: 'Colleges in India', cls: 'bg-indigo-700' },
-]
-const rightBtns = [
-  { label: 'EXAM SCHEDULE', cls: 'bg-purple-600' },
-  { label: 'EXAM RESULTS', cls: 'bg-pink-600' },
-  { label: 'NOTIFICATIONS', cls: 'bg-gray-700' },
-  { label: 'EXAM RESULTS', cls: 'bg-pink-600' },
-  { label: 'NOTIFICATIONS', cls: 'bg-gray-700' },
-  { label: 'STUDY ABROAD', cls: 'bg-orange-500' },
-  { label: 'Colleges in States', cls: 'bg-indigo-700' },
+const mbbsCountries = [
+  { 
+    flag: 'https://flagcdn.com/w160/ru.png', name: 'Russia', count: '50+ Universities', desc: 'Top Medical Universities', 
+    hoverGradient: 'hover:bg-gradient-to-b hover:from-white hover:via-blue-600 hover:to-red-600' 
+  },
+  { 
+    flag: 'https://flagcdn.com/w160/ge.png', name: 'Georgia', count: '15+ Universities', desc: 'European Standard Education', 
+    hoverGradient: 'hover:bg-gradient-to-r hover:from-white hover:to-red-600' 
+  },
+  { 
+    flag: 'https://flagcdn.com/w160/kz.png', name: 'Kazakhstan', count: '10+ Universities', desc: 'Affordable MCI Approved', 
+    hoverGradient: 'hover:bg-gradient-to-br hover:from-sky-400 hover:to-yellow-500' 
+  },
+  { 
+    flag: 'https://flagcdn.com/w160/kg.png', name: 'Kyrgyzstan', count: '12+ Universities', desc: 'Low Tuition Fees', 
+    hoverGradient: 'hover:bg-gradient-to-br hover:from-red-600 hover:to-yellow-400' 
+  },
+  { 
+    flag: 'https://flagcdn.com/w160/uz.png', name: 'Uzbekistan', count: '8+ Universities', desc: 'Modern Infrastructure', 
+    hoverGradient: 'hover:bg-gradient-to-b hover:from-blue-500 hover:via-white hover:to-emerald-500' 
+  },
+  { 
+    flag: 'https://flagcdn.com/w160/ph.png', name: 'Philippines', count: '20+ Universities', desc: 'USA Pattern Curriculum', 
+    hoverGradient: 'hover:bg-gradient-to-br hover:from-blue-700 hover:via-red-600 hover:to-white' 
+  },
 ]
 
 export default function Updates() {
   return (
-    <div className="bg-gray-50 py-14 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-center mb-10">Updates</h2>
-        <div className="grid lg:grid-cols-[180px_1fr_180px] gap-4">
-          {/* Left buttons */}
-          <div className="flex lg:flex-col flex-wrap gap-2">
-            {leftBtns.map((b, i) => (
-              <a key={i} href="#" className={`${b.cls} text-white text-center rounded px-3 py-2.5 text-xs font-bold`}>
-                {b.label}
-              </a>
-            ))}
-          </div>
+    <section className="py-12 bg-gray-50 relative overflow-hidden" id="mbbs-abroad">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-red-50/50 blur-[120px] rounded-full -ml-48 -mt-48" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-50/50 blur-[120px] rounded-full -mr-48 -mb-48" />
 
-          {/* Feed */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="bg-[#242d3e] text-white px-4 py-2.5 font-bold text-sm">LATEST UPDATES 2026</div>
-            <div className="h-96 overflow-y-auto p-4 flex flex-col gap-3">
-              {updates.map((u, i) => (
-                <div key={i} className="border border-gray-200 rounded-lg p-3 flex flex-wrap gap-2 items-start">
-                  <span className="text-red-600 text-xs font-medium">{u.date}</span>
-                  <span className="text-gray-500 text-xs">{u.uni}</span>
-                  <span className="font-semibold text-sm w-full">{u.title}</span>
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="inline-block bg-red-600/10 text-red-600 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase mb-4">
+            Medical Career
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Study MBBS in Abroad</h2>
+          <p className="text-lg text-gray-600 leading-relaxed font-medium">
+            Pursue your medical dream with global standards. We help you find MCI/NMC approved universities with affordable budgets.
+          </p>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {mbbsCountries.map((c) => (
+            <a 
+              key={c.name} 
+              href="#"
+              className={`group relative bg-white border border-gray-100 rounded-[2.5rem] p-8 transition-all duration-300 hover:shadow-2xl hover:scale-105 flex flex-col ${c.hoverGradient}`}
+            >
+              <div className="flex items-center justify-between mb-8">
+                <div className="w-16 h-16 rounded-2xl bg-gray-50 group-hover:bg-white/20 flex items-center justify-center overflow-hidden group-hover:scale-110 transition-all duration-300 shadow-inner">
+                  <img src={c.flag} alt={`${c.name} flag`} className="w-full h-full object-cover" />
                 </div>
-              ))}
-            </div>
-            <div className="bg-[#242d3e] text-right text-white text-xs px-4 py-2">View All →</div>
-          </div>
+                <div className="text-right">
+                  <p className="text-xs font-bold text-red-600 group-hover:text-black/80 uppercase tracking-wider">{c.count}</p>
+                </div>
+              </div>
+              
+              <h3 className="text-2xl font-bold text-gray-900 group-hover:text-black mb-3 transition-colors duration-300">
+                {c.name}
+              </h3>
+              
+              <p className="text-gray-500 group-hover:text-black/70 font-medium mb-8 leading-relaxed">
+                {c.desc}
+              </p>
 
-          {/* Right buttons */}
-          <div className="flex lg:flex-col flex-wrap gap-2">
-            {rightBtns.map((b, i) => (
-              <a key={i} href="#" className={`${b.cls} text-white text-center rounded px-3 py-2.5 text-xs font-bold`}>
-                {b.label}
-              </a>
-            ))}
-          </div>
+              <div className="mt-auto pt-6 border-t border-gray-100 group-hover:border-black/10 flex items-center justify-between">
+                <span className="text-xs font-bold text-gray-900 group-hover:text-black group-hover:translate-x-1 transition-all duration-300 flex items-center">
+                  VIEW UNIVERSITIES
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <a 
+            href="#" 
+            className="inline-flex items-center gap-2 h-14 px-10 bg-gray-900 hover:bg-black text-white rounded-full font-bold text-sm tracking-wide transition-all duration-300 shadow-xl shadow-gray-900/10 group"
+          >
+            VIEW ALL MEDICAL DESTINATIONS
+            <svg className="w-4 h-4 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
