@@ -16,12 +16,9 @@ const exams = [
     full: 'Scholastic Assessment Test',
     desc: 'Standardized test widely used for college admissions in the United States and other countries.',
     grad: 'hover:bg-gradient-to-br hover:from-blue-700 hover:to-indigo-900',
+    // Use a PNG placed in the public folder at: /sat-logo-png_seeklogo-478776.png
     logo: (
-      <svg viewBox="0 0 100 40" className="w-full h-full">
-        <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontSize="28" fontWeight="900" fill="currentColor" fontFamily="Verdana, sans-serif">SAT</text>
-        <circle cx="10" cy="10" r="3" fill="currentColor" opacity="0.6" />
-        <circle cx="90" cy="30" r="3" fill="currentColor" opacity="0.6" />
-      </svg>
+      <img src="/sat-logo-png_seeklogo-478776.png" alt="SAT logo" className="w-full h-full object-contain" />
     )
   },
   { 
